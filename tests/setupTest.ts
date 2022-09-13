@@ -5,13 +5,13 @@ const originalEnv = process.env;
 process.env = { ...originalEnv, NODE_ENV: 'local' };
 
 dotenv.config({
-  path: `.env.${process.env.NODE_ENV}`,
+	path: `.env.${process.env.NODE_ENV}`,
 });
 
 beforeAll(() => {
-  jest.resetModules();
+	jest.resetModules();
 });
 
 afterAll(() => {
-  process.env = originalEnv;
+	process.env = originalEnv;
 });
