@@ -20,7 +20,8 @@
   "rules": {
     "quotes": ["warn", "single"],
     "no-console": "warn",
-    "indent": ["error", "tab"]
+    "indent": ["warn", "tab"],
+    "no-mixed-spaces-and-tabs": 0
   },
   "ignorePatterns": ["*.config.js", "/src/sequelize/models/"]
 }
