@@ -1,4 +1,4 @@
-#nodejs-mariadb-template
+# nodejs-mariadb-template
 
 An Node.js server side template with these features:
 * Using routing-controllers to handle requests
