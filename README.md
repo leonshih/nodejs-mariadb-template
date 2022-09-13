@@ -15,6 +15,7 @@ An Node.js server side template with these features:
     * [Usage](#usage-1)
 * [User Authentication](#user-authentication-srclibauthentication)
     * [.env](#env-3)
+    * [Current User](#current-user)
 * [User Authority](#user-authority)
     * [Configuration](#configuration-srcconfigauthorityts)
     * [Usage](#usage-2)
@@ -168,7 +169,16 @@ authorityHandler.verifyUserFunctionAuthority(
 );
 ```
 
-#### Verify a function
+#### Check if a function has some authority
+```js
+
+const verifyRes = authorityHandler.verifyFunctionAuthority(functionKey, authority);
+
+if (!verifyRes.isValid)
+    throw new BadRequestError(
+        `${functionKey}功能並不包含以下權限：${verifyRes.invalidAuthorityList}`
+    );
+```
 
 
 ## logger
