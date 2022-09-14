@@ -9,20 +9,12 @@
     "---Sequelize---": "",
     "generateModel": "NODE_ENV=local ts-node ./src/sequelize/generateModel.ts"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/leonshih/nodejs-mariadb-template.git"
-  },
   "keywords": [
     "nodejs",
     "template"
   ],
   "author": "Leon Shih",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/leonshih/nodejs-mariadb-template/issues"
-  },
-  "homepage": "https://github.com/leonshih/nodejs-mariadb-template#readme",
   "dependencies": {
     "authority-handler": "^1.0.3",
     "axios": "^0.27.2",
