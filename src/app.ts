@@ -6,7 +6,6 @@ process.env.NODE_ENV === 'production'
 	? dotenv.config()
 	: dotenv.config({ path: `.env.${process.env.NODE_ENV}` });
 
-
 import { createAzureDataTable, createLogger } from 'azure-table-logger';
 import { getCurrentUser } from './lib/authentication';
 
@@ -15,13 +14,10 @@ import { ErrorHandler } from './middlewares/ErrorHandler';
 
 (async () => {
 	/** create azure data table */
-	if(process.env.LOG_TO_AZURE_TABLE === 'true')
-		await createAzureDataTable();
+	if (process.env.LOG_TO_AZURE_TABLE === 'true') await createAzureDataTable();
 
 	/** create logger */
 	const logger = createLogger(__filename);
-
-	logger.info('test');
 
 	/** exception handling */
 	process.on('uncaughtException', (error) => {
